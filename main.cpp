@@ -59,36 +59,36 @@ video: Chapter 2 - Part 3
 
 //2)
 
-    void variableDeclarations()
-    {
+void variableDeclarations()
+{
 
-        int shoes = 33;
-        int violins = 40;
-        int ports = 2;
+    int shoes = 33;
+    int violins = 40;
+    int ports = 2;
 
-        float height = 33.3f;
-        float weight = 94.8f;
-        float temperature = 98.5f;
+    float height = 33.3f;
+    float weight = 94.8f;
+    float temperature = 98.5f;
 
-        bool areOpen = false;
-        bool canBeRemoved = true;
-        bool isVisible = false;
+    bool areOpen = false;
+    bool canBeRemoved = true;
+    bool isVisible = false;
 
-        double bagels = 6004; 
-        double creamCheese = 884403;
-        double coffeeCups = 393939;
+    double bagels = 6004; 
+    double creamCheese = 884403;
+    double coffeeCups = 393939;
 
-        char grade = 'B';
-        char knob = 'H';
-        char view = 's';
+    char grade = 'B';
+    char knob = 'H';
+    char view = 's';
 
-        unsigned int blackPants = 7;
-        unsigned int greenJackets = 5;
-        unsigned int shoulderPads = 567;
+    unsigned int blackPants = 7;
+    unsigned int greenJackets = 5;
+    unsigned int shoulderPads = 567;
 
-        ignoreUnused(shoes, violins, ports, height, weight, temperature, areOpen, canBeRemoved, isVisible, bagels, creamCheese, coffeeCups, grade,         knob, view, blackPants,greenJackets, shoulderPads);
+    ignoreUnused(shoes, violins, ports, height, weight, temperature, areOpen, canBeRemoved, isVisible, bagels, creamCheese, coffeeCups, grade, knob, view, blackPants, greenJackets, shoulderPads);
 
-    }
+}
 
 /*
  10 functions
@@ -97,35 +97,65 @@ video: Chapter 2 - Part 3
  */
 
 
-int countClothing(unsigned int blackPants, unsigned int greenJackets, unsigned int shoulderPads) { ignoreUnused(blackPants, greenJackets, shoulderPads);
-return { }; }
+int countClothing(unsigned int blackPants, unsigned int greenJackets, unsigned int shoulderPads)
+{
+    ignoreUnused(blackPants, greenJackets, shoulderPads);
+    return { };
+}
 
-float eatFood(double bagels, double creamCheese) { ignoreUnused(bagels, creamCheese);
-return { }; }
+float eatFood(double bagels, double creamCheese)
+{
+    ignoreUnused(bagels, creamCheese);
+    return { };
+}
 
-bool unmuteChannel(int volume, bool isMuted) { ignoreUnused(volume, isMuted);
-return { }; }
+bool unmuteChannel(int volume, bool isMuted)
+{
+    ignoreUnused(volume, isMuted);
+    return { };
+}
 
-float calculateStatus(float weight, float height, float temperature, int active, int orientation) { ignoreUnused(weight, height, temperature, active, orientation);
-return { }; }
+float calculateStatus(float weight, float height, float temperature, int active, int orientation)
+{
+    ignoreUnused(weight, height, temperature, active, orientation);
+    return { };
+}
 
-double getNumberOfSamples (float getSamples){ ignoreUnused(getSamples);
-return { }; }
+double getNumberOfSamples (float getSamples)
+{
+    ignoreUnused(getSamples);
+    return { };
+}
 
-int makePhoneCall (int phoneNumber, int areaCode, int countryCode, int unlockPhoneCode){ ignoreUnused(phoneNumber, areaCode, countryCode, unlockPhoneCode);
-return { }; }
+int makePhoneCall (int phoneNumber, int areaCode, int countryCode, int unlockPhoneCode)
+{
+    ignoreUnused(phoneNumber, areaCode, countryCode, unlockPhoneCode);
+    return { };
+}
 
-char getAddress(int streetNumber, int suiteNumber, char streetName, char nameOfCity, char nameOfState, int zipCode){ ignoreUnused(streetNumber, suiteNumber, streetName, nameOfCity, nameOfState, zipCode);
-return { }; }
+char getAddress(int streetNumber, int suiteNumber, char streetName, char nameOfCity, char nameOfState, int zipCode)
+{
+    ignoreUnused(streetNumber, suiteNumber, streetName, nameOfCity, nameOfState, zipCode);
+    return { };
+}
 
-int mailLetter(int envelope, float stamp, int mailbox, int letter){ ignoreUnused(envelope, stamp, mailbox, letter);
-return { }; }
+int mailLetter(int envelope, float stamp, int mailbox, int letter)
+{
+    ignoreUnused(envelope, stamp, mailbox, letter);
+    return { };
+}
                                                                    
-double buyStamps(bool postOfficeOpen){ ignoreUnused(postOfficeOpen);
-return { }; }
+double buyStamps(bool postOfficeOpen)
+{
+    ignoreUnused(postOfficeOpen);
+    return { };
+}
 
-int cookDinner(int oven, int airFryer, int chicken, int brownRice, int chocolateCake, bool isHungry){ ignoreUnused(oven, airFryer, chicken, brownRice, chocolateCake, isHungry);
-return { }; }
+int cookDinner(int oven, int airFryer, int chicken, int brownRice, int chocolateCake, bool isHungry)
+{
+    ignoreUnused(oven, airFryer, chicken, brownRice, chocolateCake, isHungry);
+    return { };
+}
 
 
 /*
