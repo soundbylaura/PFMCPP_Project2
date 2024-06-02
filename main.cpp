@@ -16,14 +16,12 @@ video: Chapter 2 - Part 3
  
  1) Write down the names of the 6 major primitive types available in C++  here:
  
- 
- 
- 
- 
- 
- 
- 
- 
+ int
+ double
+ bool
+ float
+ unsigned int
+ char
  
 2) for each primitive type, write out 3 variable declarations inside the variableDeclaration() function on line 59.
     a) give each variable declaration an initial value
@@ -60,14 +58,36 @@ video: Chapter 2 - Part 3
  */
 
 //2)
+
 void variableDeclarations()
 {
-    //example:
-    int number = 2; //declaration of a variable named "number", that uses the primitive type 'int', and the variable's initial value is '2'
-    
 
-    
-    ignoreUnused(number); //passing each variable declared to the ignoreUnused() function
+    int shoes = 33;
+    int violins = 40;
+    int ports = 2;
+
+    float height = 33.3f;
+    float weight = 94.8f;
+    float temperature = 98.5f;
+
+    bool areOpen = false;
+    bool canBeRemoved = true;
+    bool isVisible = false;
+
+    double bagels = 6004; 
+    double creamCheese = 884403;
+    double coffeeCups = 393939;
+
+    char grade = 'B';
+    char knob = 'H';
+    char view = 's';
+
+    unsigned int blackPants = 7;
+    unsigned int greenJackets = 5;
+    unsigned int shoulderPads = 567;
+
+    ignoreUnused(shoes, violins, ports, height, weight, temperature, areOpen, canBeRemoved, isVisible, bagels, creamCheese, coffeeCups, grade, knob, view, blackPants, greenJackets, shoulderPads);
+
 }
 
 /*
@@ -75,51 +95,68 @@ void variableDeclarations()
  example:
  note: this example shows the result after completing steps 3-8
  */
-bool rentACar(int rentalDuration, int carType = 0)  //function declaration with random number of arguments, arbitrary number of arguments have default value
-{ 
-    ignoreUnused(rentalDuration, carType); //passing each function parameter to the ignoreUnused() function
-    return {}; //if your function returns something other than void, add 'return {};' at the end of it.
-} 
 
-/*
- 1)
- */
 
-/*
- 2)
- */
+int countClothing(unsigned int blackPants, unsigned int greenJackets, unsigned int shoulderPads)
+{
+    ignoreUnused(blackPants, greenJackets, shoulderPads);
+    return { };
+}
 
-/*
- 3)
- */
+float eatFood(double bagels, double creamCheese)
+{
+    ignoreUnused(bagels, creamCheese);
+    return { };
+}
 
-/*
- 4)
- */
+bool unmuteChannel(int volume, bool isMuted)
+{
+    ignoreUnused(volume, isMuted);
+    return { };
+}
 
-/*
- 5)
- */
+float calculateStatus(float weight, float height, float temperature, int active, int orientation)
+{
+    ignoreUnused(weight, height, temperature, active, orientation);
+    return { };
+}
 
-/*
- 6)
- */
+double getNumberOfSamples (float getSamples)
+{
+    ignoreUnused(getSamples);
+    return { };
+}
 
-/*
- 7)
- */
+int makePhoneCall (int phoneNumber, int areaCode, int countryCode, int unlockPhoneCode)
+{
+    ignoreUnused(phoneNumber, areaCode, countryCode, unlockPhoneCode);
+    return { };
+}
 
-/*
- 8)
- */
+char getAddress(int streetNumber, int suiteNumber, char streetName, char nameOfCity, char nameOfState, int zipCode)
+{
+    ignoreUnused(streetNumber, suiteNumber, streetName, nameOfCity, nameOfState, zipCode);
+    return { };
+}
 
-/*
- 9)
- */
+int mailLetter(int envelope, float stamp, int mailbox, int letter)
+{
+    ignoreUnused(envelope, stamp, mailbox, letter);
+    return { };
+}
+                                                                   
+double buyStamps(bool postOfficeOpen)
+{
+    ignoreUnused(postOfficeOpen);
+    return { };
+}
 
-/*
- 10)
- */
+int cookDinner(int oven, int airFryer, int chicken, int brownRice, int chocolateCake, bool isHungry)
+{
+    ignoreUnused(oven, airFryer, chicken, brownRice, chocolateCake, isHungry);
+    return { };
+}
+
 
 /*
  MAKE SURE YOU ARE NOT ON THE MASTER BRANCH
@@ -137,31 +174,28 @@ bool rentACar(int rentalDuration, int carType = 0)  //function declaration with 
 
 int main()
 {
-    //example of calling that function, storing the value, and passing it to ignoreUnused at the end of main()
-    auto carRented = rentACar(6, 2); 
+    auto dinnerCooked = cookDinner(1, 1, 4, 4, 12, false);
     
-    //1)
+    auto haveStamps = buyStamps(true);
     
-    //2)
+    auto letterMailed = mailLetter(1, 1.0f, 1, 1);
     
-    //3)
+    auto addressAcquired = getAddress(1, 1, 'a', 'b', 'c', 1);
+
+    auto phoneCallCompleted = makePhoneCall(1, 1, 1, 1);
+
+    auto samplesPlayed = getNumberOfSamples(1.0f);
     
-    //4)
-    
-    //5)
-    
-    //6)
-    
-    //7)
-    
-    //8)
-    
-    //9)
-    
-    //10)
-    
-    
-    ignoreUnused(carRented);
+    auto status = calculateStatus(123.4f, 56.3f, 1.0f, 15, 1);
+
+    auto isChannelUnmuted = unmuteChannel(0, true);
+
+    auto haveGainedWeight = eatFood(10, 10);
+
+    auto sizeOfWardrobe = countClothing(4, 2, 1);
+     
+    ignoreUnused(dinnerCooked, haveStamps, letterMailed, addressAcquired, phoneCallCompleted, samplesPlayed, status, isChannelUnmuted, haveGainedWeight, sizeOfWardrobe);
+
     std::cout << "good to go!" << std::endl;
     return 0;    
 }
